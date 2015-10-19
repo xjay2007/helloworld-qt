@@ -11,16 +11,29 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = helloworld
 TEMPLATE = app
 
+CONFIG   += console precompile_header
+# Use Precompiled headers (PCH)
+PRECOMPILED_HEADER = xmarcos.h
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    logindialog.cpp
+    logindialog.cpp \
+    menuwindow.cpp \
+    touchwidget.cpp \
+    timerwidget.cpp
 
-HEADERS  += mainwindow.h \
-    logindialog.h
+HEADERS  += xmarcos.h \
+    mainwindow.h \
+    logindialog.h \
+    menuwindow.h \
+    touchwidget.h \
+    timerwidget.h
 
 FORMS    += mainwindow.ui \
-    logindialog.ui
+    logindialog.ui \
+    menuwindow.ui \
+    touchwidget.ui \
+    timerwidget.ui
 
 RESOURCES += \
     resources.qrc

@@ -1,10 +1,11 @@
-#include "mainwindow.h"
 #include <QApplication>
 #include <QPushButton>
 #include <qfont.h>
 #include <QVBoxLayout>
 #include "logindialog.h"
 #include <QTextCodec>
+#include "menuwindow.h"
+
 
 int main(int argc, char *argv[])
 {
@@ -12,7 +13,7 @@ int main(int argc, char *argv[])
 
     QTextCodec::setCodecForLocale(QTextCodec::codecForLocale());
 
-    MainWindow w;
+    MenuWindow w;
     w.show();
     return a.exec();
 //    LoginDialog dlg;
