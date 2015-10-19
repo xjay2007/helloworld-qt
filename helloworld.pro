@@ -20,20 +20,23 @@ SOURCES += main.cpp\
     logindialog.cpp \
     menuwindow.cpp \
     touchwidget.cpp \
-    timerwidget.cpp
+    timerwidget.cpp \
+    painterwindow.cpp
 
 HEADERS  += xmarcos.h \
     mainwindow.h \
     logindialog.h \
     menuwindow.h \
     touchwidget.h \
-    timerwidget.h
+    timerwidget.h \
+    painterwindow.h
 
 FORMS    += mainwindow.ui \
     logindialog.ui \
     menuwindow.ui \
     touchwidget.ui \
-    timerwidget.ui
+    timerwidget.ui \
+    painterwindow.ui
 
 RESOURCES += \
     resources.qrc

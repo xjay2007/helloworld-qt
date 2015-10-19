@@ -3,6 +3,7 @@
 #include "mainwindow.h"
 #include "touchwidget.h"
 #include "timerwidget.h"
+#include "painterwindow.h"
 
 MenuWindow::MenuWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -17,7 +18,7 @@ MenuWindow::~MenuWindow()
     X_SAFE_DELETE(textEditor);
     X_SAFE_DELETE(touchEventWidget);
     X_SAFE_DELETE(timerWidget);
-
+    X_SAFE_DELETE(painterWindow);
 }
 
 void MenuWindow::on_pushButton_clicked()
@@ -45,4 +46,13 @@ void MenuWindow::on_pushButton_3_clicked()
     }
     timerWidget->show();
     timerWidget->activateWindow();
+}
+
+void MenuWindow::on_pushButton_4_clicked()
+{
+    if (nullptr == painterWindow) {
+        painterWindow = new PainterWindow(this);
+    }
+    painterWindow->show();
+    painterWindow->activateWindow();
 }
