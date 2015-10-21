@@ -2,6 +2,8 @@
 #define MYITEM_H
 #include <QGraphicsItem>
 
+class QKeyEvent;
+
 class MyItem : public QGraphicsItem
 {
 public:
@@ -15,6 +17,8 @@ protected:
     void mouseMoveEvent(QGraphicsSceneMouseEvent *e);
     void mouseReleaseEvent(QGraphicsSceneMouseEvent *e);
 
+protected:
+    void keyPressEvent(QKeyEvent *e);
 private:
     QColor color = QColor(qrand()%256, qrand()%256, qrand()%256);
 };

@@ -12,6 +12,8 @@ MyItem::MyItem()
 {
     setToolTip("Click and drag me");
     setCursor(QCursor(Qt::OpenHandCursor));
+    setFlag(QGraphicsItem::ItemIsFocusable);
+    setFlag(QGraphicsItem::ItemIsMovable);
 }
 
 QRectF MyItem::boundingRect() const
@@ -64,5 +66,10 @@ void MyItem::mouseMoveEvent(QGraphicsSceneMouseEvent *e)
 void MyItem::mouseReleaseEvent(QGraphicsSceneMouseEvent *)
 {
     setCursor(QCursor(Qt::OpenHandCursor));
+}
+
+void MyItem::keyPressEvent(QKeyEvent *e)
+{
+    moveBy(0, 10);
 }
 

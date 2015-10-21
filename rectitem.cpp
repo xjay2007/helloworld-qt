@@ -1,6 +1,7 @@
 #include "rectitem.h"
 #include <QPainter>
 #include <QGraphicsSceneDragDropEvent>
+#include <QMimeData>
 
 RectItem::RectItem()
 {
@@ -23,16 +24,28 @@ void RectItem::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, 
 
 void RectItem::dragEnterEvent(QGraphicsSceneDragDropEvent *e)
 {
-
+    if (e->mimeData()->hasColor()) {
+        e->setAccepted(true);
+        dragOver = true;
+        update();
+    } else {
+        e->setAccepted(false);
+    }
 }
 
 void RectItem::dragLeaveEvent(QGraphicsSceneDragDropEvent *e)
 {
-
+    Q_UNUSED(e);
+    dragOver = false;
+    update();
 }
 
 void RectItem::dropEvent(QGraphicsSceneDragDropEvent *e)
 {
-
+    dragOver = false;
+    if (e->mimeData()->hasColor()) {
+        color = qvariant_cast<QColor>(e->mimeData()->colorData());
+        update();
+    }
 }
 
