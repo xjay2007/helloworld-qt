@@ -21,7 +21,8 @@ SOURCES += main.cpp\
     menuwindow.cpp \
     touchwidget.cpp \
     timerwidget.cpp \
-    painterwindow.cpp
+    painterwindow.cpp \
+    canvasdialog.cpp
 
 HEADERS  += xmarcos.h \
     mainwindow.h \
@@ -29,14 +30,16 @@ HEADERS  += xmarcos.h \
     menuwindow.h \
     touchwidget.h \
     timerwidget.h \
-    painterwindow.h
+    painterwindow.h \
+    canvasdialog.h
 
 FORMS    += mainwindow.ui \
     logindialog.ui \
     menuwindow.ui \
     touchwidget.ui \
     timerwidget.ui \
-    painterwindow.ui
+    painterwindow.ui \
+    canvasdialog.ui
 
 RESOURCES += \
     resources.qrc
