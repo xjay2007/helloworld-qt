@@ -11,6 +11,7 @@ class MainWindow;
 class TouchWidget;
 class TimerWidget;
 class PainterWindow;
+class MyView;
 
 class MenuWindow : public QMainWindow
 {
@@ -29,6 +30,8 @@ private slots:
 
     void on_pushButton_4_clicked();
 
+    void on_pushButton_5_clicked();
+
 private:
     Ui::MenuWindow *ui;
 
@@ -36,6 +39,7 @@ private:
     TouchWidget *touchEventWidget = nullptr;
     TimerWidget *timerWidget = nullptr;
     PainterWindow *painterWindow = nullptr;
+    MyView *myView = nullptr;
 };
 
 #endif // MENUWINDOW_H

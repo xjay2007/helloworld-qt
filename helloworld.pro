@@ -22,7 +22,10 @@ SOURCES += main.cpp\
     touchwidget.cpp \
     timerwidget.cpp \
     painterwindow.cpp \
-    canvasdialog.cpp
+    canvasdialog.cpp \
+    myitem.cpp \
+    myview.cpp \
+    rectitem.cpp
 
 HEADERS  += xmarcos.h \
     mainwindow.h \
@@ -31,7 +34,10 @@ HEADERS  += xmarcos.h \
     touchwidget.h \
     timerwidget.h \
     painterwindow.h \
-    canvasdialog.h
+    canvasdialog.h \
+    myitem.h \
+    myview.h \
+    rectitem.h
 
 FORMS    += mainwindow.ui \
     logindialog.ui \

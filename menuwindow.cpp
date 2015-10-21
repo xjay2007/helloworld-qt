@@ -4,6 +4,10 @@
 #include "touchwidget.h"
 #include "timerwidget.h"
 #include "painterwindow.h"
+#include "myview.h"
+#include <QGraphicsScene>
+#include <QGraphicsView>
+#include <QGraphicsItem>
 
 MenuWindow::MenuWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -55,4 +59,12 @@ void MenuWindow::on_pushButton_4_clicked()
     }
     painterWindow->show();
     painterWindow->activateWindow();
+}
+
+void MenuWindow::on_pushButton_5_clicked()
+{
+    if (nullptr == myView) {
+        myView = new MyView;
+    }
+    myView->show();
 }

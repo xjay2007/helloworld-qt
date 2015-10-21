@@ -12,6 +12,11 @@ class CanvasDialog;
 class CanvasDialog : public QDialog
 {
     Q_OBJECT
+public:
+    enum DrawType {
+        Free,
+        Rectangle,
+    };
 
 public:
     explicit CanvasDialog(QWidget *parent = 0);
@@ -27,16 +32,26 @@ private slots:
     void zoomIn();
     void zoomOut();
 
-    void on_pushButton_clicked();
+    void onClear();
 
+    void selectFree();
+    void selectRectangle();
+
+private:
+    void clear();
 private:
     Ui::CanvasDialog *ui;
 
-    qreal scale = 1.0;
+    qreal zoomScale = 1.0;
+
+    DrawType drawType = Free;
 
     QPixmap pix;
     QPoint lastPoint;
     QPoint endPoint;
+
+    QPixmap tempPix;
+    bool isDrawing = false;
 };
 
 #endif // CANVASDIALOG_H

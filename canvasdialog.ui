@@ -19,33 +19,43 @@
      <x>290</x>
      <y>0</y>
      <width>115</width>
-     <height>134</height>
+     <height>143</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="zoomInButton">
       <property name="text">
        <string>Zoom In</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton_2">
+     <widget class="QPushButton" name="zoomOutButton">
       <property name="text">
        <string>Zoom Out</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton_3">
+     <widget class="QPushButton" name="clearButton">
       <property name="text">
-       <string>Line</string>
+       <string>Clear</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton_4">
+     <widget class="QRadioButton" name="freeRadioButton">
+      <property name="text">
+       <string>Free</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QRadioButton" name="rectangleRadioButton">
       <property name="text">
        <string>Rectangle</string>
       </property>
