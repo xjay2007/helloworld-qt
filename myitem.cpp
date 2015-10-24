@@ -27,7 +27,8 @@ void MyItem::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QW
     Q_UNUSED(option);
     Q_UNUSED(widget);
 
-    painter->setBrush(color);
+    auto isCollided = !collidingItems().isEmpty();
+    painter->setBrush(isCollided ? Qt::red : color);
     painter->drawEllipse(0, 0, 20, 20);
 }
 
@@ -63,8 +64,9 @@ void MyItem::mouseMoveEvent(QGraphicsSceneMouseEvent *e)
     setCursor(QCursor(Qt::OpenHandCursor));
 }
 
-void MyItem::mouseReleaseEvent(QGraphicsSceneMouseEvent *)
+void MyItem::mouseReleaseEvent(QGraphicsSceneMouseEvent *e)
 {
+    Q_UNUSED(e);
     setCursor(QCursor(Qt::OpenHandCursor));
 }
 

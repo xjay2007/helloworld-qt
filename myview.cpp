@@ -19,5 +19,7 @@ MyView::MyView()
     rectItem->setPos(100, 200);
     scene->addItem(rectItem);
 
+    auto line = new QGraphicsLineItem(0, 50, 30, 50);
+    scene->addItem(line);
 }
 
